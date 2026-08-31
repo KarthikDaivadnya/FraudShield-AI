@@ -10,3 +10,4 @@ shap
 jupyter
 ipykernel
 joblib
+uvicorn
