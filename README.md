@@ -10,7 +10,7 @@
 ![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black)
 ![Model Accuracy](https://img.shields.io/badge/Test%20Accuracy-99.82%25-2FD8AA)
 ![Recall](https://img.shields.io/badge/Recall-99.42%25-2FD8AA)
-![Status](https://img.shields.io/badge/Status-Capstone%20Project-5EA1FF)
+![Status](https://img.shields.io/badge/Status-Capstone%20Project(BIA)-5EA1FF)
 
 </div>
 
