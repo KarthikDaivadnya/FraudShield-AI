@@ -10,7 +10,7 @@
 ![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black)
 ![Model Accuracy](https://img.shields.io/badge/Test%20Accuracy-99.82%25-2FD8AA)
 ![Recall](https://img.shields.io/badge/Recall-99.42%25-2FD8AA)
-![Status](https://img.shields.io/badge/Status-Portfolio%20Project-5EA1FF)
+![Status](https://img.shields.io/badge/Status-Capstone%20Project-5EA1FF)
 
 </div>
 
@@ -211,7 +211,7 @@ FraudShield-AI/
 
 ```bash
 python -m venv venv
-source venv/bin/activate        # Windows: venv\Scripts\activate
+source venv/Scripts/activate        # Mac: venv\bin\activate
 pip install -r requirements.txt
 ```
 
@@ -225,19 +225,6 @@ Requires `fraudshield_production/fraudshield_rf_pipeline.joblib` and
 `fraudshield_production/decision_threshold.joblib` on disk, exactly as
 `fraudshield_api.py` already expects.
 
-Add CORS before the frontend can reach it from a browser (not in the
-file by default):
-
-```python
-from fastapi.middleware.cors import CORSMiddleware
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
-```
 
 ### 3. Frontend
 
