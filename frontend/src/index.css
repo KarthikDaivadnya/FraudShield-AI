@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-ledger-950 text-ledger-100 font-body antialiased;
+    background-image: radial-gradient(
+      circle at 12% -10%,
+      rgba(94, 161, 255, 0.08),
+      transparent 40%
+    );
+  }
+
+  ::selection {
+    background: rgba(94, 161, 255, 0.28);
+  }
+
+  :focus-visible {
+    outline: 2px solid #5ea1ff;
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0c1220;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #233149;
+    border-radius: 8px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #324361;
+  }
+}
+
+@layer components {
+  .panel {
+    @apply bg-ledger-850/80 border border-ledger-600/70 rounded-lg shadow-panel backdrop-blur-sm;
+  }
+
+  .field-label {
+    @apply block text-[13px] text-ledger-300 mb-1.5;
+  }
+
+  .field-input {
+    @apply w-full rounded-md bg-ledger-900 border border-ledger-600 px-3 py-2.5
+      text-[15px] text-ledger-100 font-mono placeholder:text-ledger-500
+      focus:border-wire/70 focus:ring-1 focus:ring-wire/40 transition-colors;
+  }
+
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

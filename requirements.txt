@@ -1,13 +1,36 @@
-numpy
-pandas
-matplotlib
-seaborn
-scikit-learn
-imbalanced-learn
-xgboost
-lightgbm
-shap
-jupyter
-ipykernel
-joblib
-uvicorn
+# FraudShield AI — Python dependencies
+#
+# Two tiers below:
+#   1. API RUNTIME   — everything fraudshield_api.py needs to serve /predict.
+#   2. NOTEBOOK ONLY — additionally needed to re-run fraudshield_ai.ipynb
+#      end to end (EDA, model comparison, SHAP, threshold search).
+#
+# Version provenance:
+#   - scikit-learn, xgboost, shap, fastapi, uvicorn, pydantic are pinned to
+#     the exact versions fraudshield_ai.ipynb printed at runtime (cells
+#     245/248, 378, 425) — e.g. `print("XGBoost version:", xgboost.__version__)`.
+#     scikit-learn==1.5.2 additionally matches the version embedded in
+#     fraudshield_final_rf_pipeline.joblib's pickle metadata.
+#   - numpy, pandas, matplotlib, seaborn, joblib, scipy were not printed in
+#     the notebook, so they're pinned to versions confirmed compatible with
+#     the packages above on Python 3.12 (installed cleanly together and
+#     re-verified against the saved pipeline: predict_proba on a known
+#     fraud case still returns 1.0 as expected).
+#
+# Python: 3.12
+
+# ── API runtime (required to run `uvicorn fraudshield_api:app`) ──
+fastapi==0.141.1
+uvicorn==0.52.4
+pydantic==2.13.4
+scikit-learn==1.5.2
+joblib==1.5.3
+pandas==3.0.2
+numpy==2.4.4
+scipy==1.17.1
+
+# ── Notebook only (training, EDA, SHAP, model comparison) ──
+matplotlib==3.10.8
+seaborn==0.13.2
+xgboost==3.4.1
+shap==0.52.0
