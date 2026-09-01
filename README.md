@@ -223,7 +223,7 @@ uvicorn fraudshield_api:app --reload
 
 Requires `fraudshield_production/fraudshield_rf_pipeline.joblib` and
 `fraudshield_production/decision_threshold.joblib` on disk, exactly as
-`fraudshield_api.py` already expects.
+`fraudshield_api.py` already expects. (can see in notebook LEVEL 13)
 
 
 ### 3. Frontend
