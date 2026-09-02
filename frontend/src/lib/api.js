@@ -5,7 +5,7 @@
 //   POST /predict      -> TransactionRequest -> { fraud_probability, prediction,
 //                          decision, risk_level, decision_threshold }
 
-export const DEFAULT_API_BASE = "http://localhost:8000";
+export const DEFAULT_API_BASE = import.meta.env.VITE_API_URL;
 
 export function getApiBase() {
   return localStorage.getItem("fraudshield_api_base") || DEFAULT_API_BASE;
