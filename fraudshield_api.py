@@ -113,7 +113,6 @@ def health_check():
         "decision_threshold": threshold
     }
 
-
 @app.post("/predict")
 def predict_transaction(transaction: TransactionRequest):
 
